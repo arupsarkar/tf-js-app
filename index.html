@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>TensorFlow JS</title>
+    <!-- <meta http-equiv="Content-Security-Policy" content="font-src 'self' data:; img-src 'self' data:; default-src 'self' http://121.0.0:3000/">     -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/icons/icon-192x192.png" />
+    <meta name="theme-color" content="#222831" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <script>
+      // Registering our Service worker
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js", { scope: "./" });
+      }
+    </script>
+
+  </head>
+  <body class="fullscreen">
+    <div class="container">
+      <h1 class="title">TensorFlow JS App</h1>
+
+      <a href="/">Home</a>
+      <a href="/image-classifier-mlp">MLP</a>
+      <a href="/image-classifier-cnn">CNN</a>
+      <div id="outlet"></div>
+
+    </div>
+    <!-- <script type="module">
+        import { Router } from "https://unpkg.com/@vaadin/router";
+      </script>     -->
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>
